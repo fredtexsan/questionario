@@ -52,6 +52,13 @@
                         <h3 class="panel-title">Bem vindo ao sistema de questionários!</h3>
                     </div>
                     <div class="panel-body">
+                    	<!-- Caso ocorra erro no login, exibe o tooltip -->
+                    	<c:if test="${not empty message}">
+							<div class="alert alert-danger fade in">
+							    <a href="#" class="close" data-dismiss="alert">&times;</a>
+							    <strong>Erro!</strong> ${message}
+							</div>
+						</c:if>
                         <form:form method="POST" commandName="user" action="${pageContext.request.contextPath}/login" role="form" id="userForm">
                             <fieldset>
                                 <div class="form-group">

@@ -94,6 +94,13 @@
 						</div>
 						<!-- /.panel-heading -->
 						<div class="panel-body">
+							<!-- Caso ocorra erro ao salvar a resposta, exibe o tooltip -->
+	                    	<c:if test="${not empty message}">
+								<div class="alert alert-danger fade in">
+								    <a href="#" class="close" data-dismiss="alert">&times;</a>
+								    <strong>Erro!</strong> ${message}
+								</div>
+							</c:if>
 							<ul class="timeline">
 								<c:forEach var="questionnarie" items="${questionnaries}" varStatus="loop">
 									<c:choose>
