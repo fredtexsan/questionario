@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Configurações do driver do banco -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- Configurações do banco de dados -->
+		<!-- <property name="connection.url">jdbc:mysql://localhost:3306/questionario</property> 
+			<property name="connection.username">root</property> <property name="connection.password">admin</property> -->
+
+		<!-- Objetos a serem persistidos -->
+		<mapping class="com.questionario.model.User" />
+		<mapping class="com.questionario.model.Questionnarie" />
+		<mapping class="com.questionario.model.Question" />
+		<mapping class="com.questionario.model.Option" />
+		<mapping class="com.questionario.model.Answer" />
+	</session-factory>
+</hibernate-configuration>
